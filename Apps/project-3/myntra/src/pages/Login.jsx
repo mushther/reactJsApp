@@ -1,8 +1,9 @@
+import { Heading } from '@chakra-ui/react'
 import React from 'react'
 
 const Login = () => {
     return (
-        <div>Login</div>
+        <Heading>Login</Heading>
     )
 }
 
