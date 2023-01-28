@@ -14,22 +14,22 @@ const Navbar = () => {
                 <Link to="/">
                     <Box p='2' display={"flex"} justifyContent={"space-between"} gap={5}>
                         <Image w={"50px"} border={"1px solid blue"} borderRadius={"50%"} src='https://i.ibb.co/FXsNQFV/Blue-Dental-Clinic-Logo.jpg' />
-                        <Heading color={"blue"} fontFamily={"heading"}>Health Care</Heading>
+                        <Heading color={"red.500"} fontFamily={"heading"}>Health Care +</Heading>
                     </Box>
                 </Link>
                 <Spacer />
                 <ButtonGroup gap='2' alignItems='center'>
                     <Link to="/doctorlist">
-                        <Button colorScheme='blue'>Book Doctor's Appointment</Button>
+                        <Button fontSize={17} fontWeight='bold' color={'blue'} bg={'none'} >Book Doctor's Appointment</Button>
                     </Link>
                     <Link to="/status">
-                        <Button marginRight={1} colorScheme='blue'>Check Booking Status</Button>
+                        <Button fontSize={17} fontWeight='bold' color={'blue'} marginRight={1} bg={'none'}>Check Booking Status</Button>
                     </Link>
                     {state.isAuth ?
-                        <Button marginRight={1} colorScheme='blue' onClick={logoutHandle}>Logout</Button>
+                        <Button marginRight={1} colorScheme='green' onClick={logoutHandle}>Logout</Button>
                         :
                         <Link to="/login">
-                            <Button marginRight={1} colorScheme='blue'>Log In</Button>
+                            <Button marginRight={1} colorScheme='red'>Log In</Button>
                         </Link>
                     }
                     <Link to="/userlist">

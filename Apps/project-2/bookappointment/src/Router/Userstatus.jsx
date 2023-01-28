@@ -3,7 +3,8 @@ import React from 'react'
 
 const Userstatus = ({ data = [] }) => {
     return (
-        <Box w={"60%"} mt={"20px"}>
+        <Box w={"60%"} m='auto' mt={"20px"}>
+            <Heading>Your Current Booking Status</Heading>
             {data.map((el) => (
                 <Box key={el.id}>
                     <Card
@@ -50,6 +51,7 @@ const Userstatus = ({ data = [] }) => {
                             </CardFooter>
                         </Stack>
                     </Card>
+
                 </Box>
             ))
             }

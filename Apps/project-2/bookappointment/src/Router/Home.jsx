@@ -18,12 +18,12 @@ const Home = () => {
     }, [])
     //console.log(data);
     return (
-        <Box mt={"80px"}>
+        <Box mt={"80px"} bg={"blue.100"}>
             <Box bg={"blue.100"} height={"auto"} display={"flex"} justifyContent={"space-between"} padding={"4rem"} >
-                <Box textAlign={"start"} color={"blue"} >
-                    <Heading fontFamily={"serif"} fontSize={"60px"} mt={10} w={"100%"} >Best doctors</Heading>
+                <Box textAlign={"start"} >
+                    <Heading fontFamily={"serif"} fontSize={"60px"} mt={10} w={"100%"} color={"red.500"}>Best doctors</Heading>
                     <Heading fontFamily={"serif"} fontSize={"60px"} w={"100%"}>at the best hospitals</Heading>
-                    <Heading fontFamily={"serif"} fontSize={"60px"} w={"100%"}>Search and Book now.</Heading>
+                    <Heading fontFamily={"serif"} fontSize={"60px"} w={"100%"} color={"teal"}>Search and Book now.</Heading>
                     <Link to="/doctorlist">
                         <Button position={"none"} colorScheme='blue' mt={5}>Book Doctor's Appointment</Button>
                     </Link>
@@ -40,13 +40,13 @@ const Home = () => {
                 padding: "20px 80px 80px 80px"
             }}>
                 {data.map((el) => (
-                    <Box padding={2}>
+                    <Box padding={2} >
                         <Image
                             borderRadius={"20px 20px 0px 0px"}
                             src='https://i.pinimg.com/originals/56/d1/c0/56d1c032884032f4216b9bc790c00a1e.jpg'
                             alt='Caffe Latte'
                         />
-                        <Box border={"1px solid black"} borderRadius={"0px 0px 20px 20px"} padding={2}>
+                        <Box bg={'white'} border={"1px solid black"} borderRadius={"0px 0px 20px 20px"} padding={2}>
                             <Heading>{el.doctorname}</Heading>
                             <Text borderRadius={"5px"} w={"auto"}>{el.eduction}</Text>
                             <Text>Address: {el.address}</Text>
