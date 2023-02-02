@@ -5,15 +5,13 @@ import { AuthContextProvider } from '../Context/AuthContext'
 
 const Login = () => {
     const { loginHandle } = useContext(AuthContextProvider);
-    // const [state, setState] = useState(false);
 
     const handleClick = () => {
-        // setState(true)
         loginHandle(`MHK${Date.now()}LK`);
     }
     return (
-        <Box w={"80%"} m={"auto"} mt={"95px"}>
-            <FormControl>
+        <Box w={"80%"} m={"auto"} >
+            <FormControl pb={"355px"} pt={"95px"}>
                 <Heading>Login</Heading>
                 <FormLabel>Email address</FormLabel>
                 <Input type='email' />

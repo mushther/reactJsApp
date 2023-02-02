@@ -40,6 +40,7 @@ const DoctorList = () => {
                         direction={{ base: 'column', sm: 'row' }}
                         overflow='hidden'
                         variant='outline'
+                        color={'white'}
                     >
                         <Image
                             objectFit='cover'
@@ -70,7 +71,23 @@ const DoctorList = () => {
 
                             <CardFooter>
                                 <Link to='/bookappointment'>
-                                    <Button position={"none"} variant='solid' onClick={() => { handleApntNumber(el) }} colorScheme='blue'>
+                                    <Button
+                                        _hover={{
+                                            border: '2px solid white',
+                                            width: '190px',
+                                            height: '45px',
+                                            bg: 'none',
+                                            color: 'white',
+                                            fontWeight: 'bold'
+                                        }}
+                                        marginRight={1}
+                                        bg='aqua'
+                                        color={'black'}
+                                        fontWeight={'bold'}
+                                        fontSize={17}
+                                        position={"none"}
+                                        variant='solid'
+                                        onClick={() => { handleApntNumber(el) }} colorScheme='blue'>
                                         Book Appointment
                                     </Button>
                                 </Link>

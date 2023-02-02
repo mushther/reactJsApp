@@ -24,7 +24,7 @@ const Status = () => {
         setFlag(false);
     }
     return (
-        <Box w={"80%"} m={"auto"} mt={"95px"} textAlign='center'>
+        <Box w={"80%"} pb={"495px"} pt={"65px"} m={"auto"} mt={"80px"} textAlign='center'>
             {flag ?
                 <FormControl position={"none"}>
                     <Heading>Check Your Booking Status</Heading>

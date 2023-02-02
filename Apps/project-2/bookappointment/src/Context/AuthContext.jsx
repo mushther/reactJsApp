@@ -9,6 +9,10 @@ const intialState = {
 const AuthContext = ({ children }) => {
     const [state, setStat] = useState(intialState);
 
+    //localStorage.setItem("auth", true);
+
+    //const status = localStorage.getItem('auth');
+
     const loginHandle = (token) => {
         setStat({ ...state, isAuth: true, token })
     }

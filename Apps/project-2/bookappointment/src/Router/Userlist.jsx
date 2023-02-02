@@ -17,11 +17,12 @@ const Userlist = () => {
     }, [])
     // console.log(data);
     return (
-        <Box mt={"80px"}>
+        <Box color={'white'} mt={"80px"}>
             {data.map((el) => (
                 <Box key={el.id}>
                     <Card
                         position={"none"}
+                        color={'white'}
                         padding={5}
                         direction={{ base: 'column', sm: 'row' }}
                         overflow='hidden'

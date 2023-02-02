@@ -27,7 +27,7 @@ const BookAppointment = () => {
 
     const postData = (id) => {
         axios.post(`https://doctor-appointment-seven.vercel.app/user`, formState)
-        console.log(formState);
+        //console.log(formState);
 
         axios.put(`https://doctor-appointment-seven.vercel.app/doctor/${id}`, {
             "id": appointment.id,
