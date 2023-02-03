@@ -1,10 +1,11 @@
 import { Box, Button, Card, CardBody, CardFooter, Heading, Image, Stack } from '@chakra-ui/react'
 import React from 'react'
+import { FaMapMarkedAlt } from 'react-icons/fa'
 
 const Userstatus = ({ data = [] }) => {
     return (
         <Box w={"60%"} m='auto' mt={"20px"}>
-            <Heading>Your Current Booking Status</Heading>
+            <Heading mb={10} display='flex' gap={4} alignItems={'center'}><FaMapMarkedAlt />Your Current Booking Status</Heading>
             {data.map((el) => (
                 <Box key={el.id}>
                     <Card
@@ -13,6 +14,7 @@ const Userstatus = ({ data = [] }) => {
                         direction={{ base: 'column', sm: 'row' }}
                         overflow='hidden'
                         variant='outline'
+                        color={'white'}
                     >
                         <Image
                             objectFit='cover'

@@ -68,7 +68,7 @@ const Medicines = ({
                 </CardBody>
                 <Divider />
                 <CardFooter>
-                    <ButtonGroup spacing='16' justifyContent={'space-around'}>
+                    <ButtonGroup spacing='14' justifyContent={'space-around'}>
                         <Button position={'none'} _hover={{ bg: 'none', border: '2px solid white' }} variant='solid' colorScheme='blue'>
                             Buy now
                         </Button>

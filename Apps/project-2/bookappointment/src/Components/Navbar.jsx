@@ -1,10 +1,11 @@
 import { Button, ButtonGroup } from '@chakra-ui/button'
-import { Box, Spacer } from '@chakra-ui/layout'
+import { Box, Spacer, Text } from '@chakra-ui/layout'
 import { Link } from 'react-router-dom'
 import { Flex, Image } from '@chakra-ui/react'
 import React, { useContext } from 'react'
 import { AuthContextProvider } from '../Context/AuthContext'
 import Logo from '../Data/logo/health_care.png'
+import { FaCartPlus, FaUserCircle } from 'react-icons/fa'
 const Navbar = () => {
     const { state, logoutHandle } = useContext(AuthContextProvider);
     console.log(state.isAuth);
@@ -46,19 +47,27 @@ const Navbar = () => {
                             fontSize={17} >Check Booking Status</Button>
                     </Link>
                     {state.isAuth ?
-                        <Button
-                            _hover={{
-                                border: '2px solid white',
-                                width: '80px',
-                                height: '45px',
-                                bg: 'none',
-                                color: 'white',
-                                fontWeight: 'bold'
-                            }}
-                            marginRight={1}
-                            bg='none'
-                            fontWeight={'bold'}
-                            onClick={logoutHandle}>Logout</Button>
+                        <Flex >
+                            <Button
+                                _hover={{
+                                    border: '2px solid white',
+                                    width: '80px',
+                                    height: '45px',
+                                    bg: 'none',
+                                    color: 'white',
+                                    fontWeight: 'bold'
+                                }}
+                                marginRight={1}
+                                bg='none'
+                                fontWeight={'bold'}
+                                onClick={logoutHandle}>Logout</Button>
+                            <Link to="/userlist">
+                                <Text marginRight={5} w={"43px"} fontSize='4xl'><FaUserCircle /> </Text>
+                            </Link>
+                            <Link to="/userlist">
+                                <Text marginRight={5} w={"43px"} fontSize='4xl'><FaCartPlus /> </Text>
+                            </Link>
+                        </Flex>
                         :
                         <Link to="/login">
                             <Button
@@ -76,9 +85,7 @@ const Navbar = () => {
                             >Log In</Button>
                         </Link>
                     }
-                    <Link to="/userlist">
-                        <Image marginRight={5} w={"43px"} borderRadius={"50%"} src='https://th.bing.com/th/id/OIP.Z1bbnX3-kQnRKMy1GwhQ_QHaHa?w=201&h=201&c=7&r=0&o=5&dpr=1.3&pid=1.7' />
-                    </Link>
+
                 </ButtonGroup>
             </Flex>
         </>
